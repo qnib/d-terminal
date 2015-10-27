@@ -1,4 +1,4 @@
-FROM qnib/u-consul
+FROM qnib/d-consul
 
 RUN apt-get install -y dnsutils vim nmap
 
