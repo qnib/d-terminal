@@ -1,4 +1,4 @@
-FROM qnib/d-consul
+FROM qnib/d-consul:squeeze
 
 RUN apt-get install -y dnsutils vim nmap iputils-ping
 
