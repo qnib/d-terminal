@@ -1,6 +1,7 @@
 FROM qnib/d-consul
 
-RUN apt-get install -y dnsutils vim nmap iputils-ping
+RUN apt-get update && \
+    apt-get install -y dnsutils vim nmap iputils-ping
 
 # dependencies needed by costum scripts (e.g. osquery)
 RUN apt-get install -y python-pip libyaml-dev python-dev 
@@ -17,4 +18,4 @@ ADD etc/consul.d/diamond.json /etc/consul.d/
 #ADD opt/qnib/bin/watch_psutil.py /opt/qnib/bin/
 #ADD etc/supervisord.d/watchpsutil.ini /etc/supervisord.d/
 # osqueryi
-
+RUN cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
