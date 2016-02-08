@@ -1,4 +1,4 @@
-FROM qnib/d-consul:wheezy
+FROM qnib/d-consul
 
 RUN apt-get update && \
     apt-get install -y dnsutils vim nmap iputils-ping procps
