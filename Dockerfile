@@ -1,6 +1,8 @@
 FROM qnib/d-consul:squeeze
 
-RUN apt-get install -y dnsutils vim nmap iputils-ping apt-utils procps
+RUN echo "2016-02-23.1" && \
+    apt-get update -y && \
+    apt-get install -y dnsutils vim nmap iputils-ping apt-utils procps
 
 # dependencies needed by costum scripts (e.g. osquery)
 RUN apt-get install -y python-pip libyaml-dev python-dev 
